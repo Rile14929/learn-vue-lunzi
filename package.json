@@ -1,0 +1,33 @@
+{
+  "name": "lunzi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rile14929/learn-vue-lunzi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rile14929/learn-vue-lunzi/issues"
+  },
+  "homepage": "https://github.com/Rile14929/learn-vue-lunzi#readme",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.0"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
