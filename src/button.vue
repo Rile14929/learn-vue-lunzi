@@ -1,6 +1,7 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-    <g-icon v-if="icon" :name="icon"></g-icon>
+    <g-icon v-if="icon" :name="icon" class="icon"></g-icon>
+    <g-icon name="loading" class="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -13,14 +14,18 @@ export default {
     iconPosition:{
       type:String,
       default:'left',
-      validator (value){
-        return value === 'left' || value === 'right'
-      }
+        validator: function (value) {
+            return value === 'left' || value === 'right'
+        }
     }
   }
 }
 </script>
 <style lang="scss">
+@keyframes spin {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
 .g-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -41,11 +46,14 @@ export default {
   &:focus {
     outline: none;
   }
-  > .icon{ order:1}
-  > .content{ order:2;margin-left: .1em}
+  > .content{ order:2;}
+  > .icon{ order:1; margin-right: .1em}
   &.icon-right{
-    > .icon{ order: 2;}
-    > .content{ order:1;margin-left:0;margin-right: .1em}
+    > .content{ order:1;}
+    > .icon{ order: 2;margin-right:0;margin-left: .1em}
+  }
+  .loading {
+    animation: spin 1s infinite linear
   }
 }
 </style>
