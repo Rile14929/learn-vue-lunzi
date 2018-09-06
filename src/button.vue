@@ -14,7 +14,7 @@ export default {
       type:String,
       default:'left',
       validator (value){
-        return value === 'left' && value === 'right'
+        return value === 'left' || value === 'right'
       }
     }
   }
@@ -44,8 +44,8 @@ export default {
   > .icon{ order:1}
   > .content{ order:2;margin-left: .1em}
   &.icon-right{
-    > .icon{ order: 2;margin-left:.1em;margin-right: 0}
-    > .content{ order:1;}
+    > .icon{ order: 2;}
+    > .content{ order:1;margin-left:0;margin-right: .1em}
   }
 }
 </style>
