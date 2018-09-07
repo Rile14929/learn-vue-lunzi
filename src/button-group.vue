@@ -6,6 +6,13 @@
 <script>
 export default {
   mounted() {
+    console.log(this.$el.children)
+    let el = this.$el.children
+    for(let node of el) {
+      if(node.nodeName.toLowerCase() !== 'button') {
+        console.warn(`g-button-group的子元素应该全是g-button,但是你写的是${node.nodeName.toLowerCase()}`)
+      }
+    }
   }
 }
 </script>
@@ -15,7 +22,6 @@ export default {
   vertical-align: middle;
   .g-button{
     border-radius:0;
-    margin-left:-1px;
     &:not(:first-child){
       margin-left:-1px;
     }
