@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>按钮</title>
 </head>
 <style>
   * {
@@ -22,7 +22,7 @@
     --border-radius: 4px;
     --color: #333;
     --border-color: #999;
-    --border-color-hover: #666;
+    --border-color-hover: red;
   }
 
   #app {
@@ -51,6 +51,18 @@
     <g-button icon="setting" icon-position="right" :loading='loading3' @clickb="loading3 = !loading3">
       按钮
     </g-button>
+
+    <g-button-group>
+      <g-button icon="left">
+        向左
+      </g-button>
+      <g-button>
+        更多
+      </g-button>
+      <g-button icon="right" icon-position="right">
+        向右
+      </g-button>
+    </g-button-group>
   </div>
   <script src="./src/app.js"></script>
   <script src="//at.alicdn.com/t/font_619562_bpewse3sile.js"></script>
