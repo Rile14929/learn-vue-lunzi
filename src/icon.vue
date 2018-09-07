@@ -1,5 +1,5 @@
 <template>
-  <svg v-if="name" class="icon">
+  <svg v-if="name" class="icons">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
@@ -9,5 +9,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.icon {width:1em;height:1em}
+.icons {width:1em;height:1em}
 </style>
