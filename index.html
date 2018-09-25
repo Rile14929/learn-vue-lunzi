@@ -42,7 +42,8 @@
 
 <body>
   <div id="app">
-    <g-input error="chucuo"></g-input>
+    <g-input @input="inputChange" v-model="message"></g-input>
+    <div>{{message}}</div>
     <g-button :loading='loading1' @clickb="loading1 = !loading1">
       按钮
     </g-button>
